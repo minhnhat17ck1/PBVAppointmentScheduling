@@ -1,0 +1,21 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: 'Manrope', sans-serif;
+  color: #444444;
+  display: flex;
+  justify-content: center;
+}
+
+
+#main {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.css-mhc70k-MuiGrid-root {
+  justify-content: center;
+}
+
