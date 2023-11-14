@@ -22,7 +22,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Booking = () => {
 
-  useEffect(() => emailjs.init("2FRhM7NAE0ZFgGQiD"), []);
+  useEffect(() => emailjs.init("<PUBLIC_EMAILJS_KEY>"), []);
 
   const Alert = React.forwardRef((props, ref) => (
     <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
@@ -129,10 +129,9 @@ const Booking = () => {
       const isUserEmailValid = validateUserEmail();
       const isServiceTypeValid = validateServiceType();
       const formattedDateTime = selectedDateTime.format('MM/DD/YYYY [at] HH:mm');
-      const serviceId = "service_n43gtkq";
-      const templateId = "template_zf7c082";
-      const getAppointment = 'https://appointment-server-production.up.railway.app/Appointment';
-      // const getAppointment = 'http://localhost:8080/Appointment';
+      const serviceId = "<YOUR_EMAILJS_SERVICE_ID>";
+      const templateId = "<YOUR_EMAILJS_TEMPLATE_ID>";
+      const getAppointment = 'http://localhost:8080/Appointment';
       
   
       

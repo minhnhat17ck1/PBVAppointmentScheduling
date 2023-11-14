@@ -54,8 +54,7 @@ export default function DataTable() {
 
   const fetchData = async () => {
     try {
-      const getAppointmentByUser = `https://appointment-server-production.up.railway.app/Modify/${userAccount}`;
-      // const getAppointmentByUser = `http://localhost:8080/Modify/${userAccount}`;
+      const getAppointmentByUser = `http://localhost:8080/Modify/${userAccount}`;
       const response = await axios.get(getAppointmentByUser);
       // Add a unique identifier 'id' to each row
       const appointmentsWithId = response.data.map((appointment, _id) => ({
@@ -74,8 +73,7 @@ export default function DataTable() {
 
   const handleDeleteRow = (dbID) => {
     console.log('Handling delete for ID:', dbID);
-    const deleteAppointmentByUser = `https://appointment-server-production.up.railway.app/Modify/${userAccount}/${dbID}`;
-    // const deleteAppointmentByUser = `http://localhost:8080/Modify/${user.email}/${dbID}`;
+    const deleteAppointmentByUser = `http://localhost:8080/Modify/${userAccount}/${dbID}`;
     // Send a DELETE request to the server
     axios.delete(deleteAppointmentByUser) 
       .then(() => {

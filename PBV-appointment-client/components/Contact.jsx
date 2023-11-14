@@ -13,7 +13,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Contact = () => {
 
-  useEffect(() => emailjs.init("2FRhM7NAE0ZFgGQiD"), []);
+  useEffect(() => emailjs.init("<PUBLIC_EMAILJS_KEY>"), []);
 
   const { user } = useAuth0();
   const Alert = React.forwardRef((props, ref) => (
@@ -96,8 +96,8 @@ const Contact = () => {
       const isLastNameValid = validateLastName();
       const isUserEmailValid = validateUserEmail();
       const isMessageValid = validateMessage();
-      const serviceId = "service_n43gtkq";
-      const templateId = "template_q0mhjdp";
+      const serviceId = "<YOUR_EMAILJS_SERVICE_ID>";
+      const templateId = "<YOUR_EMAILJS_TEMPLATE_ID>";
 
       if (isFirstNameValid && isLastNameValid &&  isUserEmailValid && isMessageValid) {
         try {
